@@ -1,0 +1,24 @@
+@import "_misc/mixin";
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+body {
+
+}
+
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  background-color: #eee;
+}
+
+
+@import 'common/general';

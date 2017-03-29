@@ -1,0 +1,26 @@
+extends ../_template
+
+include ../_mixin/lorem
+
+block variables
+	- var title = 'test page'
+
+block content
+	.main-container
+		.container
+			header.header
+				.sign-in
+					button.btn.btn-sign-in(type="button") Войти
+			.main-content
+				section.content
+					//+lorem(15, "paragraphs")
+				aside.sidebar
+					//+lorem(5, "paragraphs")
+		footer.footer
+			.container ПОДВАЛ
+
+		.popup-wrap.popup-wrap_closed
+			.popup
+				.popup__desc авторизуйтесь
+				.popup__btn
+					button.btn.btn-popup(type="button") Закрыть
