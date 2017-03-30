@@ -1,0 +1,126 @@
+.header {
+  padding: 40px 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  color: #fff;
+  background-color:  rgba(46, 97, 183, 0);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.34) 26%, rgba(0, 0, 0, 0) 100%);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
+.lang {
+  position: absolute;
+  bottom: 112%;
+  right: 2px;
+
+  &__link {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    font-size: 11px;
+    @include avenir(bold);
+
+    &:not(:first-child) {
+      margin-left: 22px;
+    }
+  }
+}
+
+.logo {
+  position: relative;
+
+  &__pic {
+    margin-bottom: 6px;
+  }
+  &__tagline {
+    font-size: 14px;
+  }
+}
+
+.menu {
+  margin-left: auto;
+
+  &__list {
+    display: flex;
+    list-style: none;
+    font-size: 18px;
+  }
+  &__item {
+    @include avenir(medium);
+    position: relative;
+    cursor: pointer;
+    transition: .25s ease-in-out;
+
+    &:not(:first-child) {
+      margin-left: 50px;
+    }
+    &:after {
+      content: '';
+      display: inline-block;
+      margin-left: 10px;
+      width: 1px;
+      border-style: solid;
+      border-width: 6px 3px 0;
+      border-color: #fff transparent transparent;
+      transition: .25s ease-in-out;
+    }
+    &:hover {
+      text-decoration: underline;
+      &:after {
+        transform: rotate(180deg);
+      }
+
+      > .inner-list {
+        display: block;
+      }
+    }
+  }
+
+  &__link {
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+.sign-in {
+  margin-left: 50px;
+  position: relative;
+  margin-right: -24px;
+  padding: 0 7px;
+  border: 1px solid rgba(#fff, .5);
+  border-radius: 30px;
+
+  &__link {
+    display: inline-block;
+    text-decoration: none;
+    color:#fff;
+    font-size: 18px;
+    @include avenir(medium);
+    padding: 12px 18px;
+
+    &:not(:first-child) {
+      position: relative;
+      &:before {
+        content: '';
+        display: inline-block;
+        background-color: rgba(#fff, .5);
+        width: 2px;
+        position: absolute;
+        left: 0;
+        top: 10px;
+        bottom: 10px;
+      }
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

@@ -1,0 +1,43 @@
+@font-face {
+  font-family: 'avenirbold';
+  src: url('../fonts/AvenirNext-DemiBold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'avenirbold_italic';
+  src: url('../fonts/AvenirNext-DemiBoldItalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'avenirmedium';
+  src: url('../fonts/AvenirNext-Medium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'avenirmedium_italic';
+  src: url('../fonts/AvenirNext-MediumItalic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'avenirregular';
+  src: url('../fonts/AvenirNext-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@mixin avenir($style: regular) {
+  @if $style == regular {
+    font-family: 'avenirregular';
+  }
+  @if $style == bold {
+    font-family: 'avenirbold';
+  }
+  @if $style == medium {
+    font-family: 'avenirmedium';
+  }
+}
