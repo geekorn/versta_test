@@ -1,0 +1,26 @@
+h1,h2, figure, ul {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  //background-color: #eee;
+}
+
+.container {
+  width: 940px;
+  margin: 0 auto;
+  position: relative;
+}
+
+a {
+  transition: .25s ease-in-out;
+
+  &:hover {
+    opacity: .7;
+  }
+}

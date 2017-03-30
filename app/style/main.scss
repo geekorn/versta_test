@@ -1,4 +1,5 @@
 @import "_misc/mixin";
+@import "_misc/fonts";
 
 * {
   box-sizing: border-box;
@@ -11,14 +12,11 @@ html, body {
   padding: 0;
 }
 body {
-
+  @include avenir(regular);
 }
 
-.wrapper {
-  width: 100%;
-  min-height: 100%;
-  background-color: #eee;
-}
-
-
-@import 'common/general';
+@import 'common/_general';
+@import 'common/header';
+@import 'common/welcome';
+@import 'common/about';
+@import 'common/footer';

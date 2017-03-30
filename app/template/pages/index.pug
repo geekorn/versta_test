@@ -6,21 +6,62 @@ block variables
 	- var title = 'test page'
 
 block content
-	.main-container
-		.container
-			header.header
-				.sign-in
-					button.btn.btn-sign-in(type="button") Войти
-			.main-content
-				section.content
-					//+lorem(15, "paragraphs")
-				aside.sidebar
-					//+lorem(5, "paragraphs")
-		footer.footer
-			.container ПОДВАЛ
+	header.header
+		.container.header-container
+			.lang
+				a.lang__link(href="#") Рус
+				a.lang__link(href="#") Каз
 
-		.popup-wrap.popup-wrap_closed
-			.popup
-				.popup__desc авторизуйтесь
-				.popup__btn
-					button.btn.btn-popup(type="button") Закрыть
+			figure.logo
+				img.logo__pic(src="assets/img/logo.png" alt="" title="")
+				figcaption.logo__tagline Центр онлайн тестирования
+
+			nav.menu
+				ul.menu__list
+					li.menu__item
+						a.menu__link(href="#") Материалы
+					li.menu__item
+						a.menu__link(href="#") О проекте
+
+			.sign-in
+				a.sign-in__link(href="#") Вход
+				a.sign-in__link(href="#") Регистрация
+
+	section.welcome
+		.container.welcome-container
+			h1.title Самый лучший способ оценить свои знания
+			.welcome__desc Пробное тестирование и школьные образовательные курсы
+			a.btn(href="#") Узнать больше
+
+	section.about
+		.container.about-container
+
+			.text-container
+				.bg-container
+				h2.block-title Сдать ЕНТ <br/> больше не проблема
+
+				.about-desc
+					p Если ты хочешь:
+					ul.about-list
+						li.about-list__item.
+							пройти Единое Национальное Тестирование<br/> или Комплексное Тестирование,
+						li.about-list__item.
+							уверенно чувствовать себя на экзамене,
+						li.about-list__item.
+							набрать максимум баллов на тестировании,
+					p то наше предложение как раз для тебя
+
+				a.btn.about-btn(href="#") Узнать больше
+
+				.partner.
+					#[a.partner__link(href="#") UStudy.kz] — официальный партнер
+					Национального Центра Тестирования.
+
+	footer.footer
+		.container
+			.contacts.
+				#[span.color_blue +7 (727) 356 00 28] или #[span.color_blue 3560], звонки с любых операторов (кроме АLTEL) бесплатны. #[a.contacts__link(href="mailto:#") info@ustudy.kz]
+			.copy-right.
+				© ТОО "U-Partners" 2011-2017, Все права защищены.
+
+
